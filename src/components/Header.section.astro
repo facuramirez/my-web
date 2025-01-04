@@ -1,0 +1,118 @@
+---
+import { Image } from "astro:assets";
+import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
+---
+
+<header
+  id="header"
+  class="z-50 fixed h-dvh lg:h-[5rem] w-full bg-[var(--secondary-bg)]"
+>
+  <Image
+    src={LogoRojo}
+    alt="Logo"
+    class="absolute size-[3rem] left-[1rem] top-[1rem]"
+  />
+  <div
+    id="hamburguer"
+    class="absolute top-[1rem] right-[1.5rem] cursor-pointer p-[0.5rem] size-[3rem] flex flex-col justify-center gap-[0.3rem] [&>span]:transition [&>span]:bg-[var(--primary-color)] [&>span]:h-[0.2rem] [&>span]:w-[100%]"
+  >
+    <span id="line1" class="line"></span>
+    <span id="line2" class="line"></span>
+    <span id="line3" class="line"></span>
+  </div>
+  <nav
+    id="menu"
+    class="[&>span]:text-[#fff] h-[100%] hover:[&>span]:text-[var(--primary-color)] flex flex-col lg:flex-row justify-center items-center gap-x-10 gap-y-6 text-2xl [&>span]:opacity-0 [&>span]:translate-y-full cursor-pointer"
+  >
+    <span id="home" class="section">Inicio</span>
+    <span id="about" class="section">Sobre mi</span>
+    <span id="projects" class="section">Proyectos</span>
+    <span class="section">Formacion</span>
+    <span class="section">Experiencia</span>
+    <span class="section">Contacto</span>
+  </nav>
+</header>
+
+<style>
+  header {
+    clip-path: circle(1.5rem at calc(100% - 3rem) 2.5rem);
+  }
+
+  .openMenu {
+    clip-path: circle(1000rem at calc(100% - 3rem) calc(100% - 2.5rem));
+  }
+
+  .openLine1 {
+    transition: all 300ms;
+    transform: translateY(0.5rem) rotate(45deg);
+  }
+
+  .openLine2 {
+    transition: opacity 300ms;
+    opacity: 0;
+  }
+
+  .openLine3 {
+    transition: all 300ms;
+    transform: translateY(-0.5rem) rotate(-45deg);
+  }
+
+  .openSection {
+    span {
+      transition: all 300ms;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #menu {
+    font-family: var(--font2);
+  }
+</style>
+
+<script>
+  const header = document.getElementById("header");
+  const menu = document.getElementById("menu");
+  const hamburguer = document.getElementById("hamburguer");
+  const line1 = document.getElementById("line1");
+  const line2 = document.getElementById("line2");
+  const line3 = document.getElementById("line3");
+  const home = document.getElementById("home");
+  const homeSection = document.getElementById("home-section");
+  const about = document.getElementById("about");
+  const aboutSection = document.getElementById("about-section");
+  const projects = document.getElementById("projects");
+  const projectsSection = document.getElementById("projects-section");
+
+  hamburguer?.addEventListener("click", function () {
+    header?.classList.toggle("openMenu");
+    menu?.classList.toggle("openSection");
+    line1?.classList.toggle("openLine1");
+    line2?.classList.toggle("openLine2");
+    line3?.classList.toggle("openLine3");
+  });
+
+  const slideUp = {
+    distance: "150%",
+    origin: "bottom",
+    opacity: null,
+  };
+
+  home?.addEventListener("click", (event) => {
+    event.preventDefault();
+    homeSection?.scrollIntoView({ behavior: "smooth" });
+    hamburguer?.click();
+  });
+
+  about?.addEventListener("click", (event) => {
+    event.preventDefault();
+    aboutSection?.scrollIntoView({ behavior: "smooth" });
+    hamburguer?.click();
+  });
+
+  projects?.addEventListener("click", (event) => {
+    event.preventDefault();
+    projectsSection?.scrollIntoView({ behavior: "smooth" });
+    hamburguer?.click();
+  });
+</script>
