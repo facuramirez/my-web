@@ -6,7 +6,7 @@ import Travel from "../assets/svg/travel.svg";
 import Read from "../assets/svg/read.svg";
 ---
 
-<h2 class="text-2xl lg:text-4xl 2xl:text-5xl">Mis intereses</h2>
+<h2 class="text-xl lg:text-3xl 2xl:text-4xl">Mis intereses</h2>
 <div
   class="gridInterested flex flex-row justify-center gap-4 lg:gap-8 [&>div]:bg-[var(--secondary-bg)] hover:[&>div]:bg-[var(--primary-color)] transition [&>div]:p-2 [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:justify-center [&>div]:gap-2 text-md [&>div>h2]:lg:text-xl [&>div]:text-center"
 >
@@ -37,14 +37,14 @@ import Read from "../assets/svg/read.svg";
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     svg {
-      width: 100%;
+      width: 100px;
       height: 100%;
     }
   }
 
   @media screen and (max-width: 768px) {
     .gridInterested {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
   }
 </style>

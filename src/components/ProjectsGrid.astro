@@ -6,7 +6,7 @@ import Paisaje3 from "../assets/paisaje3.webp";
 import Paisaje4 from "../assets/paisaje4.webp";
 ---
 
-<div id="projectsGrid" class="">
+<div id="projectsGrid">
   <div
     class="card relative overflow-hidden transition [&>img]:hover:scale-110 [&>img]:hover:opacity-10 [&>div]:hover:opacity-100 hover:cursor-crosshair"
   >
@@ -16,7 +16,7 @@ import Paisaje4 from "../assets/paisaje4.webp";
     >
       <div class="infoTitle flex flex-col gap-2 items-center justify-center">
         <h3 class="text-lg lg:text-2xl xl:text-3xl">Trello Reload</h3>
-        <p>Una version minimalista de Trello</p>
+        <p class="text-md">Una version minimalista de Trello</p>
       </div>
       <div class="technologies flex flex-row">
         <span
@@ -47,7 +47,7 @@ import Paisaje4 from "../assets/paisaje4.webp";
     >
       <div class="infoTitle flex flex-col gap-2 items-center justify-center">
         <h3 class="text-lg lg:text-2xl xl:text-3xl">Sport Managment</h3>
-        <p>Gestiona tu centro deportivo aqui</p>
+        <p class="text-md">Gestiona tu centro deportivo aqui</p>
       </div>
       <div class="technologies flex flex-row">
         <span
@@ -78,7 +78,7 @@ import Paisaje4 from "../assets/paisaje4.webp";
     >
       <div class="infoTitle flex flex-col gap-2 items-center justify-center">
         <h3 class="text-lg lg:text-2xl xl:text-3xl">Dragon Ball Z</h3>
-        <p>Revivi la mejor serie con todos sus personajes</p>
+        <p class="text-md">Revivi la mejor serie con todos sus personajes</p>
       </div>
       <div class="technologies flex flex-row">
         <span
@@ -109,7 +109,7 @@ import Paisaje4 from "../assets/paisaje4.webp";
     >
       <div class="infoTitle flex flex-col gap-2 items-center justify-center">
         <h3 class="text-lg lg:text-2xl xl:text-3xl">Weather App</h3>
-        <p>¿Día frío o caluroso? Descubrilo</p>
+        <p class="text-md">¿Día frío o caluroso? Descubrilo</p>
       </div>
       <div class="technologies flex flex-row">
         <span
@@ -133,7 +133,9 @@ import Paisaje4 from "../assets/paisaje4.webp";
   #projectsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    p {
+    p,
+    h3 {
+      width: 450px;
       text-align: center;
     }
   }

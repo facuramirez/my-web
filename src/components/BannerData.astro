@@ -1,0 +1,118 @@
+---
+import Experience from "../assets/svg/experience.svg";
+import CodeLines from "../assets/svg/codeLines.svg";
+import Cofee from "../assets/svg/cofee.svg";
+---
+
+<article class="bannerData relative">
+  <div
+    class="background text-white opacity-20 blur-[3px] h-[750px] lg:h-[500px] lg:h-[450px] w-full flex flex-row justify-center items-center gap-8 my-12"
+  >
+  </div>
+  <div
+    class="data w-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white flex flex-col lg:flex-row gap-12 [&>div]:basis-1/3 lg:gap-16 xl:gap-24 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:justify-center [&>div]:gap-2 lg:[&>div]:gap-6 [&>div>span]:text-3xl lg:[&>div>span]:text-4xl xl:[&>div>span]:text-5xl [&>div>p]:text-lg lg:[&>div>p]:text-xl xl:[&>div>p]:text-2xl"
+  >
+    <div class="first">
+      <Experience class="p-3 lg:p-5" />
+      <span>+ <span id="experience">0</span></span>
+      <p>Años de experiencia</p>
+    </div>
+    <div class="second">
+      <CodeLines />
+      <span>+ <span id="lineCodes">0</span></span>
+      <p>Lineas de codigo</p>
+    </div>
+    <div class="third">
+      <Cofee class="translate-x-[5px] p-2" />
+      <span>+ <span id="cupOfTea">0</span></span>
+      <p>Tazas de cafe</p>
+    </div>
+  </div>
+</article>
+
+<style>
+  .background {
+    background-image: url("../assets/svg/code.jpeg");
+    background-attachment: fixed;
+  }
+  .first {
+    span,
+    p {
+      @media screen and (max-width: 1024px) {
+        transform: translateY(-0.5rem);
+      }
+    }
+  }
+  .data {
+    svg {
+      height: 100%;
+      width: 90px;
+      @media screen and (max-width: 1024px) {
+        width: 70px;
+      }
+    }
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  const experience = document.getElementById("experience") as HTMLDivElement;
+  const lineCodes = document.getElementById("lineCodes") as HTMLDivElement;
+  const cupOfTea = document.getElementById("cupOfTea") as HTMLDivElement;
+
+  ScrollTrigger.create({
+    trigger: lineCodes,
+    start: "top 80%",
+    // Otros parámetros de configuración
+  });
+
+  gsap.to(experience, {
+    innerText: 4,
+    duration: 0.1,
+    startAt: { innerText: 0 },
+    scrollTrigger: {
+      trigger: experience, // Elemento que activa el trigger
+      start: "top bottom", // Cuando la parte superior del elemento entra en la vista (bottom de la ventana)
+      // onEnter: () =>  "El elemento es visible en la ventana de vista."
+      // onLeave: () =>  "El elemento salió de la vista."
+    },
+    onUpdate: function () {
+      experience.textContent = Math.round(
+        this.targets()[0].innerText
+      ).toString();
+    },
+  });
+
+  gsap.to(lineCodes, {
+    innerText: 10684,
+    duration: 3,
+    startAt: { innerText: 0 },
+    scrollTrigger: {
+      trigger: lineCodes, // Elemento que activa el trigger
+      start: "top bottom", // Cuando la parte superior del elemento entra en la vista (bottom de la ventana)
+    },
+    onUpdate: function () {
+      // Aquí puedes actualizar el texto durante la animación
+      lineCodes.textContent = Math.round(
+        this.targets()[0].innerText
+      ).toString();
+    },
+  });
+
+  gsap.to(cupOfTea, {
+    innerText: 1276,
+    duration: 2,
+    startAt: { innerText: 0 },
+    scrollTrigger: {
+      trigger: cupOfTea, // Elemento que activa el trigger
+      start: "top bottom", // Cuando la parte superior del elemento entra en la vista (bottom de la ventana)
+    },
+    onUpdate: function () {
+      // Aquí puedes actualizar el texto durante la animación
+      cupOfTea.textContent = Math.round(this.targets()[0].innerText).toString();
+    },
+  });
+</script>
