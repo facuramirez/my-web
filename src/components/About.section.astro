@@ -8,7 +8,7 @@ import MyData from "./MyData.astro";
 
 <article
   id="about-section"
-  class="bg-[var(--primary-bg)] flex flex-col gap-y-6 lg:gap-y-20 text-white p-8 lg:py-12 lg:p-20 xl:p-32"
+  class="min-h-dvh bg-[var(--primary-bg)] flex flex-col gap-y-6 lg:gap-y-20 text-white p-8 lg:py-12 lg:p-20 xl:p-32"
 >
   <Title title="Sobre mi" />
   <p class="description text-md lg:text-lg 2xl:text-xl">
@@ -49,7 +49,7 @@ import MyData from "./MyData.astro";
 
   @media screen and (max-width: 1150px) {
     .interestSection {
-      flex-flow: column wrap;
+      flex-flow: column;
     }
   }
 
