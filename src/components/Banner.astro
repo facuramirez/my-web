@@ -1,40 +1,59 @@
 ---
 import Html from "../assets/svg/FRONTEND/Html.svg";
-import Css from "../assets/svg/FRONTEND/Css.svg";
+import CssNew from "../assets/svg/FRONTEND/CssNew.svg";
+import Sass from "../assets/svg/FRONTEND/Sass.svg";
+import FramerMotion from "../assets/svg/FRONTEND/Framer_Motion.svg";
 import Javascript from "../assets/svg/FRONTEND/Javascript.svg";
 import React from "../assets/svg/FRONTEND/React.svg";
 import Next from "../assets/svg/FRONTEND/Nextjs.svg";
 import Typescript from "../assets/svg/FRONTEND/Typescript.svg";
+import AntDesign from "../assets/svg/FRONTEND/Ant_Design.svg";
 import Node from "../assets/svg/BACKEND/Nodejs.svg";
+import Express from "../assets/svg/BACKEND/Express.svg";
 import Nest from "../assets/svg/BACKEND/Nestjs.svg";
+import MongoDb from "../assets/svg/BACKEND/MongoDB.svg";
+import Mongoose from "../assets/svg/BACKEND/Mongoose.svg";
+import Postgre from "../assets/svg/BACKEND/PostgreSql.svg";
 ---
 
-<div class="wrapper bg-[var(--primary-bg)] my-8">
-  <Html class="item item1" />
-  <Css class="item item2" />
-  <Javascript class="item item3" />
-  <React class="item item4" />
-  <Next class="item item5" />
-  <Typescript class="item item6" />
-  <Node class="item item7" />
-  <Nest class="item item8" />
+<div id="banner">
+  <div class="wrapper my-4 lg:my-8">
+    <Html class="item item1" />
+    <CssNew class="item item2" />
+    <Sass class="item item3" />
+    <FramerMotion class="item item4" />
+    <Javascript class="item item5" />
+    <React class="item item6" />
+    <Next class="item item7" />
+    <Typescript class="item item8" />
+    <AntDesign class="item item9" />
+    <Node class="item item10" />
+    <Express class="item item11" />
+    <Nest class="item item12" />
+    <MongoDb class="item item13" />
+    <Mongoose class="item item14" />
+    <Postgre class="item item15" />
+  </div>
 </div>
 
 <style>
-  .wrapper {
-    margin-inline: auto;
-    position: relative;
-    width: 80%;
-    max-width: 2000px;
-    height: 100px;
-    overflow: hidden;
-    mask-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 1) 20%,
-      rgba(0, 0, 0, 1) 80%,
-      rgba(0, 0, 0, 0)
-    );
+  #banner {
+    background-color: var(--secondary-bg);
+    .wrapper {
+      margin-inline: auto;
+      position: relative;
+      width: 80%;
+      max-width: 2000px;
+      height: 50px;
+      overflow: hidden;
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+      );
+    }
   }
 
   @keyframes scrollLeft {
@@ -45,7 +64,7 @@ import Nest from "../assets/svg/BACKEND/Nestjs.svg";
 
   .item {
     width: 200px;
-    height: 100px;
+    height: 50px;
     border-radius: 6px;
     position: absolute;
     left: max(calc(200px * 8), 100%);
@@ -56,35 +75,58 @@ import Nest from "../assets/svg/BACKEND/Nestjs.svg";
   }
 
   .item1 {
-    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+    animation-delay: calc(30s / 15 * (15 - 1) * -1);
   }
   .item2 {
-    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+    animation-delay: calc(30s / 15 * (15 - 2) * -1);
   }
   .item3 {
-    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+    animation-delay: calc(30s / 15 * (15 - 3) * -1);
   }
   .item4 {
-    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+    animation-delay: calc(30s / 15 * (15 - 4) * -1);
   }
   .item5 {
-    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+    animation-delay: calc(30s / 15 * (15 - 5) * -1);
   }
   .item6 {
-    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+    animation-delay: calc(30s / 15 * (15 - 6) * -1);
   }
   .item7 {
-    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+    animation-delay: calc(30s / 15 * (15 - 7) * -1);
   }
   .item8 {
-    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+    animation-delay: calc(30s / 15 * (15 - 8) * -1);
+  }
+  .item9 {
+    animation-delay: calc(30s / 15 * (15 - 9) * -1);
+  }
+  .item10 {
+    animation-delay: calc(30s / 15 * (15 - 10) * -1);
+  }
+  .item11 {
+    animation-delay: calc(30s / 15 * (15 - 11) * -1);
+  }
+  .item12 {
+    animation-delay: calc(30s / 15 * (15 - 12) * -1);
+  }
+  .item13 {
+    animation-delay: calc(30s / 15 * (15 - 13) * -1);
+  }
+  .item14 {
+    animation-delay: calc(30s / 15 * (15 - 14) * -1);
+  }
+  .item15 {
+    animation-delay: calc(30s / 15 * (15 - 15) * -1);
   }
 
   @media screen and (max-width: 1024px) {
-    .item {
-      width: 100px;
-      height: 50px;
-      left: max(calc(100px * 8), 100%);
+    #banner {
+      .item {
+        width: 80px;
+        height: 40px;
+        left: max(calc(100px * 8), 100%);
+      }
     }
   }
 </style>

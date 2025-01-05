@@ -1,0 +1,47 @@
+---
+import Title from "./Title.astro";
+import MapaCba from "../assets/svg/mapa.webp";
+import { Image } from "astro:assets";
+import ContactoFondo from "../assets/mapa.jpg";
+---
+
+<article id="contact-section" class="relative">
+  <Image
+    src={ContactoFondo}
+    alt="Fondo"
+    class="object-fit h-dvh min-h-[40rem] z-10 absolute top-0 left-0 opacity-10"
+  />
+  <div
+    class="z-20 absolute w-full top-0 left-0 bg-transparent text-white flex flex-col gap-12 lg:gap-20 items-center justify-evenly lg:justify-center p-12 lg:p-24"
+  >
+    <Title title="Contacto" class="z-20" />
+    <div class="flex flex-col 2xl:flex-row w-full gap-8">
+      <section
+        class="first flex flex-col gap-4 basis-1/2 [&>*]:text-xl [&>*]:lg:text-2xl [&>*]:outline-none [&>*]:bg-[var(--secondary-bg)] [&>*]:px-6 [&>*]:py-4"
+      >
+        <input type="text" placeholder="Nombre" />
+        <input type="text" placeholder="Telefono" />
+        <input type="text" placeholder="Correo" />
+        <input type="text" placeholder="Asunto" />
+        <textarea placeholder="Por favor, escribe tu consulta..."></textarea>
+      </section>
+
+      <section class="basis-1/2">
+        <Image
+          src={MapaCba}
+          alt="mapa"
+          class="second w-full max-w-[70rem] mx-auto"
+        />
+      </section>
+    </div>
+  </div>
+</article>
+
+<style>
+  #contact-section {
+    textarea {
+      resize: vertical;
+      min-height: 15rem;
+    }
+  }
+</style>
