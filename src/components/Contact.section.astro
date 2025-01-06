@@ -10,10 +10,7 @@ import Footer from "./Footer.astro";
 ---
 
 <Title id="contact-section-title" title="Contacto" class="z-20" />
-<article
-  id="contact-section"
-  class="min-h-dvh relative border border-yellow-500 border-8"
->
+<article id="contact-section" class="min-h-dvh relative">
   <Image
     src={ContactoFondo}
     alt="Fondo"
@@ -22,12 +19,10 @@ import Footer from "./Footer.astro";
   <div
     class="z-20 absolute h-full w-full top-0 left-0 bg-transparent text-white flex flex-col gap-12 lg:gap-20 p-8 lg:p-24"
   >
-    <div
-      class="flex flex-col 2xl:flex-row w-full gap-8 border border-white border-8 h-full"
-    >
+    <div class="flex flex-col 2xl:flex-row w-full gap-8">
       <form
         id="form"
-        class="border h-full border-black border-8 first flex flex-col gap-2 lg:gap-4 basis-1/2 [&>*]:text-sm lg:[&>*]:text-md lg:[&>*]:xl:text-lg [&>*]:outline-none [&>input]:bg-[var(--secondary-bg)] [&>textarea]:bg-[var(--secondary-bg)] [&>input]:px-4 [&>textarea]:px-4 [&>*]:py-3 lg:[&>input]:px-6 lg:[&>textarea]:px-6 lg:[&>*]:py-2"
+        class="h-full first flex flex-col gap-2 lg:gap-4 basis-1/2 [&>*]:text-sm lg:[&>*]:text-md lg:[&>*]:xl:text-lg [&>*]:outline-none [&>input]:bg-[var(--secondary-bg)] [&>textarea]:bg-[var(--secondary-bg)] [&>input]:px-4 [&>textarea]:px-4 [&>*]:py-3 lg:[&>input]:px-6 lg:[&>textarea]:px-6 lg:[&>*]:py-2"
       >
         <input id="name" type="text" placeholder="Nombre" />
         <input type="text" placeholder="Telefono" />
@@ -46,7 +41,7 @@ import Footer from "./Footer.astro";
         </div>
       </form>
 
-      <section class="basis-1/2 border border-red-500 border-8">
+      <section class="basis-1/2">
         <figure class="second relative h-full w-full max-w-[50rem] mx-auto">
           <Image src={MapaCba} alt="mapa" class="w-full" />
           <!-- <Image

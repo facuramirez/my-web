@@ -1,11 +1,36 @@
 ---
 import Social from "./Social.astro";
+import Logo from "../assets/Favicon_rojo.svg";
+import { Image } from "astro:assets";
 ---
 
-<article class="flex flex-col gap-y-4 p-6 bg-red-500">
+<article class="flex flex-col gap-y-6 p-4 items-center">
+  <Image src={Logo} alt="Logo" class="size-24" />
   <Social footer />
-  <h5 class="text-white text-center">
-    Desarrollado por <span class="text-[var(--primary-color)]">Facudev</span> - Todos
-    los derechos reservados &copy; 2025
-  </h5>
+  <nav
+    id="menu"
+    class="[&>*]:text-[#fff] [&>span]:text-[1rem] h-[100%] hover:[&>a]:text-[var(--primary-color)] flex flex-col lg:flex-row justify-center items-center gap-x-10 gap-y-6 [&>a]:transition text-3xl lg:text-xl [&>a]:cursor-pointer border px-12 pb-4 border-t-0 border-r-0 border-l-0 border-b-[#ccc]"
+  >
+    <a href="#home-section-title" id="home" class="section">Inicio</a>
+    <span>|</span>
+    <a href="#about-section-title" id="about" class="section">Sobre mi</a>
+    <span>|</span>
+    <a href="#projects-section-title" id="projects" class="section">Proyectos</a
+    >
+    <span>|</span>
+    <a href="#curriculum-section-title" id="curriculum" class="section"
+      >Curriculum</a
+    >
+    <span>|</span>
+    <a href="#contact-section-title" -section id="contact" class="section"
+      >Contacto</a
+    >
+  </nav>
+  <div
+    class="flex flex-row gap-x-4 items-center justify-center text-white text-center mb-2"
+  >
+    <span>2025 &copy; Facudev</span>
+    <span class="w-[1rem] h-[3px] bg-white"></span>
+    <span>Todos los derechos reservados</span>
+  </div>
 </article>

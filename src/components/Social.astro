@@ -9,15 +9,17 @@ import Ig from "../assets/svg/ig.svg";
 <div
   id="social"
   class:list={[
+    [
+      "flex gap-x-4 my-6 [&>svg]:cursor-pointer hover:[&>a>svg]:bg-[var(--primary-color)] hover:[&>a>svg]:fill-[#fff] hover:[&>a>svg]:transition",
+    ],
     {
       "lg:hidden absolute bottom-[2rem] left-1/2 -translate-x-1/2 lg:[&>a>svg]:size-[2rem] [&>a>svg]:size-[2rem]":
         mobile,
     },
     {
-      "w-fit mx-auto [&>a>svg]:size-[2rem] my-0": footer,
+      "w-fit my-2 m-0 mx-auto [&>a>svg]:size-[2rem]": footer,
     },
   ]}
-  class="flex gap-x-4 my-6 [&>svg]:cursor-pointer hover:[&>a>svg]:bg-[var(--primary-color)] hover:[&>a>svg]:fill-[#fff] hover:[&>a>svg]:transition"
 >
   <a href="https://wa.me/3764227220" target="_blank">
     <Wp
