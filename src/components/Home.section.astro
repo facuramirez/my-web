@@ -1,11 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import Facu from "../assets/facu2.png";
-
 import Social from "./Social.astro";
 ---
 
-<div id="home-section-title"></div>
 <article
   id="home-section"
   class="min-h-dvh relative bg-[var(--primary-bg)] flex flex-col lg:flex-row items-center justify-evenly lg:justify-center p-12 lg:p-24"
@@ -37,16 +35,16 @@ import Social from "./Social.astro";
   <section
     class="flex flex-col basis-full w-full lg:basis-1/2 text-[#fff] items-center order-2 lg:order-1 lg:gap-y-2 xl:gap-y-4 [&>*]:text-center [&>*]:[text-shadow:_3px_3px_5px_#000]"
   >
-    <h3 class="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
-      Facundo Ramirez
-    </h3>
+    <h3 class="text-xl lg:text-xl xl:text-2xl 2xl:text-4xl">Facundo Ramirez</h3>
     <div
       class="flex flex-row flex-wrap gap-1 lg:gap-2 items-center justify-center"
     >
-      <h2 class="mt-2 lg:mt-0 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+      <h2 class="mt-2 lg:mt-0 text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl">
         Desarrollador
       </h2>
-      <h2 class="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">Full Stack</h2>
+      <h2 class="mt-2 lg:mt-0 text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl">
+        Full Stack
+      </h2>
     </div>
 
     <Social />
@@ -204,7 +202,7 @@ import Social from "./Social.astro";
       filter: blur(20px);
       transform: translateY(120%);
       animation:
-        infiniteBrightness 0.5s 1s infinite,
+        infiniteBrightness 1.5s 1s infinite,
         textFour 0.8s 1s forwards linear;
     }
   }

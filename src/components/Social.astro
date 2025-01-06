@@ -1,5 +1,5 @@
 ---
-const { mobile } = Astro.props;
+const { mobile, footer } = Astro.props;
 import Wp from "../assets/svg/wp.svg";
 import Lkd from "../assets/svg/lkd.svg";
 import Gh from "../assets/svg/gh.svg";
@@ -12,6 +12,9 @@ import Ig from "../assets/svg/ig.svg";
     {
       "lg:hidden absolute bottom-[2rem] left-1/2 -translate-x-1/2 lg:[&>a>svg]:size-[2rem] [&>a>svg]:size-[2rem]":
         mobile,
+    },
+    {
+      "w-fit mx-auto [&>a>svg]:size-[2rem] my-0": footer,
     },
   ]}
   class="flex gap-x-4 my-6 [&>svg]:cursor-pointer hover:[&>a>svg]:bg-[var(--primary-color)] hover:[&>a>svg]:fill-[#fff] hover:[&>a>svg]:transition"
