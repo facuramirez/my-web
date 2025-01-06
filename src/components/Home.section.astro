@@ -1,12 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import Facu from "../assets/facu2.png";
-import Wp from "../assets/svg/wp.svg";
-import Lkd from "../assets/svg/lkd.svg";
-import Gh from "../assets/svg/gh.svg";
-import Ig from "../assets/svg/ig.svg";
+
+import Social from "./Social.astro";
 ---
 
+<div id="home-section-title"></div>
 <article
   id="home-section"
   class="min-h-dvh relative bg-[var(--primary-bg)] flex flex-col lg:flex-row items-center justify-evenly lg:justify-center p-12 lg:p-24"
@@ -50,43 +49,7 @@ import Ig from "../assets/svg/ig.svg";
       <h2 class="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">Full Stack</h2>
     </div>
 
-    <div
-      id="social"
-      class="flex gap-x-4 my-6 [&>svg]:cursor-pointer hover:[&>a>svg]:bg-[var(--primary-color)] hover:[&>a>svg]:fill-[#fff] hover:[&>a>svg]:transition"
-    >
-      <a href="https://wa.me/3764227220" target="_blank">
-        <Wp
-          id="wp"
-          width={"2.5rem"}
-          height={"2.5rem"}
-          class="bg-white p-2 rounded-[0.5rem]"
-        />
-      </a>
-      <a href="https://www.linkedin.com/in/facundoramirezok/" target="_blank">
-        <Lkd
-          id="lkd"
-          width={"2.5rem"}
-          height={"2.5rem"}
-          class="bg-white p-2 rounded-[0.5rem]"
-        />
-      </a>
-      <a href="https://github.com/facuramirez" target="_blank">
-        <Gh
-          id="gh"
-          width={"2.5rem"}
-          height={"2.5rem"}
-          class="bg-white p-[5px] rounded-[0.5rem]"
-        />
-      </a>
-      <a href="https://www.instagram.com/facuramirez_/" target="_blank">
-        <Ig
-          id="ig"
-          width={"2.5rem"}
-          height={"2.5rem"}
-          class="bg-white p-[7px] rounded-[0.5rem]"
-        />
-      </a>
-    </div>
+    <Social />
     <button
       id="walk"
       class="min-w-fit mt-2 lg:mt-4 text-white bg-[var(--primary-color)] hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] font-medium rounded-full text-sm lg:text-lg px-6 py-2 text-center me-2 mb-2 dark:bg-[var(--primary-color)] dark:hover:bg-[var(--primary-color)] dark:focus:ring-[var(--primary-color)]"
@@ -154,11 +117,6 @@ import Ig from "../assets/svg/ig.svg";
         padding: 3px;
       }
     }
-    #walk {
-      animation:
-        infiniteBrightness 1.5s infinite,
-        textFour 0.8s 0.8s forwards linear;
-    }
     .facuImg {
       mask-image: linear-gradient(black 60%, transparent);
       filter: drop-shadow(0px 0px 10px #ccc);
@@ -215,17 +173,23 @@ import Ig from "../assets/svg/ig.svg";
       }
     }
 
-    h2 {
+    h3 {
       opacity: 0;
       filter: blur(20px);
       transform: translateY(120%);
       animation: textOne 0.8s 0.2s forwards linear;
     }
+    h2 {
+      opacity: 0;
+      filter: blur(20px);
+      transform: translateY(120%);
+      animation: textOne 0.8s 0.4s forwards linear;
+    }
     h1 {
       opacity: 0;
       filter: blur(20px);
       transform: translateY(120%);
-      animation: textTwo 0.8s 0.5s forwards linear;
+      animation: textTwo 0.8s 0.6s forwards linear;
     }
     #social {
       svg {
@@ -235,10 +199,13 @@ import Ig from "../assets/svg/ig.svg";
         animation: textThree 0.8s 0.8s forwards linear;
       }
     }
-    button {
+    #walk {
       opacity: 0;
       filter: blur(20px);
       transform: translateY(120%);
+      animation:
+        infiniteBrightness 0.5s 1s infinite,
+        textFour 0.8s 1s forwards linear;
     }
   }
 

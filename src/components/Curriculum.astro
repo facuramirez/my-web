@@ -4,16 +4,17 @@ import ExperienceCard from "./ExperienceCard.astro";
 import Title from "./Title.astro";
 ---
 
+<div id="curriculum-section-title"></div>
+<Title title="Curriculum" />
 <article
-  id="cv-section"
-  class="bg-[var(--primary-bg)] flex flex-col gap-y-6 lg:gap-y-20 text-white py-8 px-2 lg:py-12"
+  id="curriculum-section"
+  class="bg-[var(--primary-bg)] text-white py-8 px-2 lg:py-26 lg:mt-8"
 >
-  <Title title="Curriculum" />
   <div
     class="flex flex-col 2xl:flex-row [&>section]:basis-1/2 gap-4 justify-center [&>section>h2]:text-center [&>section>h2]:text-xl [&>section>h2]:lg:text-3xl [&>section>h2]:2xl:text-4xl [&>section>h2]:mb-4"
   >
     <section
-      class="first flex flex-col gap-6 border border-l-0 border-t-0 border-b-0 border-r-4 border-[rgba(255,255,255,0.1)] m-2 md:m-8 lg:m-32 2xl:m-0"
+      class="first flex flex-col gap-x-6 border border-l-0 border-t-0 border-b-0 border-r-4 border-[rgba(255,255,255,0.1)] m-2 md:m-8 lg:m-32 2xl:m-0"
     >
       <h2>Experiencia</h2>
       <ExperienceCard
@@ -55,7 +56,7 @@ import Title from "./Title.astro";
       />
     </section>
     <section
-      class="second flex flex-col gap-6 border border-l-4 border-t-0 border-b-0 border-r-0 border-[rgba(255,255,255,0.1)] m-2 md:m-8 lg:m-32 2xl:m-0"
+      class="second flex flex-col gap-x-6 border border-l-4 border-t-0 border-b-0 border-r-0 border-[rgba(255,255,255,0.1)] m-2 md:m-8 lg:m-32 2xl:m-0"
     >
       <h2>Educacion</h2>
       <EducationCard

@@ -1,16 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
+import LogoRojo from "../assets/Favicon_rojo.svg";
+import Social from "./Social.astro";
 ---
 
 <header
   id="header"
-  class="z-50 fixed h-dvh lg:h-[5rem] w-full bg-[var(--secondary-bg)]"
+  class="z-50 fixed h-dvh lg:h-[5rem] w-full bg-[var(--secondary-bg)] [&>*]:[text-shadow:_3px_3px_5px_#000]"
 >
   <Image
     src={LogoRojo}
     alt="Logo"
-    class="absolute size-[3rem] left-[1rem] top-[1rem]"
+    class="absolute size-[2.5rem] lg:size-[3rem] left-[1rem] top-[1.3rem] lg:top-[1rem]"
   />
   <div
     id="hamburguer"
@@ -22,17 +23,21 @@ import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
   </div>
   <nav
     id="menu"
-    class="[&>a]:text-[#fff] h-[100%] hover:[&>a]:text-[var(--primary-color)] flex flex-col lg:flex-row justify-center items-center gap-x-10 gap-y-6 text-xl [&>a]:opacity-0 [&>a]:translate-y-full cursor-pointer"
+    class="[&>a]:text-[#fff] h-[100%] hover:[&>a]:text-[var(--primary-color)] flex flex-col lg:flex-row justify-center items-center gap-x-10 gap-y-6 text-3xl lg:text-xl [&>a]:opacity-0 [&>a]:translate-y-full [&>a]:cursor-pointer"
   >
-    <a href="#home-section" id="home" class="section">Inicio</a>
-    <a href="#about-section" id="about" class="section">Sobre mi</a>
-    <a href="#projects-section" id="projects" class="section">Proyectos</a>
-    <a href="#education-section" id="education" class="section">Educacion</a>
-    <a href="#experience-section" id="experience" class="section">Experiencia</a
+    <a href="#home-section-title" id="home" class="section">Inicio</a>
+    <a href="#about-section-title" id="about" class="section">Sobre mi</a>
+    <a href="#projects-section-title" id="projects" class="section">Proyectos</a
     >
-    <a href="#contact-section" -section id="contact" class="section">Contacto</a
+    <a href="#curriculum-section-title" id="curriculum" class="section"
+      >Curriculum</a
+    >
+    <a href="#contact-section-title" -section id="contact" class="section"
+      >Contacto</a
     >
   </nav>
+
+  <Social mobile />
 </header>
 
 <style>
@@ -91,13 +96,15 @@ import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
   const line2 = document.getElementById("line2");
   const line3 = document.getElementById("line3");
   const home = document.getElementById("home");
-  const homeSection = document.getElementById("home-section");
+  const homeSection = document.getElementById("home-section-title");
   const about = document.getElementById("about");
-  const aboutSection = document.getElementById("about-section");
+  const aboutSection = document.getElementById("about-section-title");
   const projects = document.getElementById("projects");
-  const projectsSection = document.getElementById("projects-section");
+  const projectsSection = document.getElementById("projects-section-title");
+  const curriculum = document.getElementById("curriculum");
+  const curriculumSection = document.getElementById("curriculum-section-title");
   const contact = document.getElementById("contact");
-  const contactSection = document.getElementById("contact-section");
+  const contactSection = document.getElementById("contact-section-title");
 
   // ScrollTrigger for activating the link
   const links = gsap.utils.toArray("nav a") as HTMLAnchorElement[];
@@ -157,6 +164,12 @@ import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
   projects?.addEventListener("click", (event) => {
     event.preventDefault();
     projectsSection?.scrollIntoView({ behavior: "smooth" });
+    hamburguer?.click();
+  });
+
+  curriculum?.addEventListener("click", (event) => {
+    event.preventDefault();
+    curriculumSection?.scrollIntoView({ behavior: "smooth" });
     hamburguer?.click();
   });
 
