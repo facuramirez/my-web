@@ -6,15 +6,15 @@ import Cofee from "../assets/svg/cofee.svg";
 
 <article class="bannerData relative">
   <div
-    class="background text-white opacity-20 blur-[3px] h-[750px] lg:h-[500px] lg:h-[450px] w-full flex flex-row justify-center items-center gap-8 my-12"
+    class="background text-white opacity-20 blur-[3px] h-[750px] lg:h-[400px] lg:h-[450px] w-full flex flex-row justify-center items-center gap-8 my-12"
   >
   </div>
   <div
-    class="data w-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white flex flex-col lg:flex-row gap-12 [&>div]:basis-1/3 lg:gap-16 xl:gap-24 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:justify-center [&>div]:gap-2 lg:[&>div]:gap-6 [&>div>span]:text-3xl lg:[&>div>span]:text-4xl xl:[&>div>span]:text-5xl [&>div>p]:text-lg lg:[&>div>p]:text-xl xl:[&>div>p]:text-2xl"
+    class="data w-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white flex flex-col lg:flex-row gap-12 [&>div]:basis-1/3 lg:gap-16 xl:gap-24 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:justify-center [&>div]:gap-2 lg:[&>div]:gap-6 [&>div>span]:text-3xl lg:[&>div>span]:text-4xl xl:[&>div>span]:text-5xl [&>div>p]:text-md lg:[&>div>p]:text-lg"
   >
     <div class="first">
       <Experience class="p-3 lg:p-5" />
-      <span>+ <span id="experience">0</span></span>
+      <span class="">+ <span id="experienceTime">0</span></span>
       <p>Años de experiencia</p>
     </div>
     <div class="second">
@@ -59,7 +59,9 @@ import Cofee from "../assets/svg/cofee.svg";
   import ScrollTrigger from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
-  const experience = document.getElementById("experience") as HTMLDivElement;
+  const experience = document.getElementById(
+    "experienceTime"
+  ) as HTMLDivElement;
   const lineCodes = document.getElementById("lineCodes") as HTMLDivElement;
   const cupOfTea = document.getElementById("cupOfTea") as HTMLDivElement;
 

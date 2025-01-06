@@ -22,14 +22,16 @@ import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
   </div>
   <nav
     id="menu"
-    class="[&>span]:text-[#fff] h-[100%] hover:[&>span]:text-[var(--primary-color)] flex flex-col lg:flex-row justify-center items-center gap-x-10 gap-y-6 text-2xl [&>span]:opacity-0 [&>span]:translate-y-full cursor-pointer"
+    class="[&>a]:text-[#fff] h-[100%] hover:[&>a]:text-[var(--primary-color)] flex flex-col lg:flex-row justify-center items-center gap-x-10 gap-y-6 text-xl [&>a]:opacity-0 [&>a]:translate-y-full cursor-pointer"
   >
-    <span id="home" class="section">Inicio</span>
-    <span id="about" class="section">Sobre mi</span>
-    <span id="projects" class="section">Proyectos</span>
-    <span class="section">Formacion</span>
-    <span class="section">Experiencia</span>
-    <span class="section">Contacto</span>
+    <a href="#home-section" id="home" class="section">Inicio</a>
+    <a href="#about-section" id="about" class="section">Sobre mi</a>
+    <a href="#projects-section" id="projects" class="section">Proyectos</a>
+    <a href="#education-section" id="education" class="section">Educacion</a>
+    <a href="#experience-section" id="experience" class="section">Experiencia</a
+    >
+    <a href="#contact-section" -section id="contact" class="section">Contacto</a
+    >
   </nav>
 </header>
 
@@ -58,7 +60,7 @@ import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
   }
 
   .openSection {
-    span {
+    a {
       transition: all 300ms;
       opacity: 1;
       transform: translateY(0);
@@ -68,9 +70,20 @@ import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
   #menu {
     font-family: var(--font2);
   }
+
+  .active {
+    color: var(--primary-color);
+  }
 </style>
 
 <script>
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+  import ScrollToPlugin from "gsap/ScrollToPlugin";
+
+  // Register the ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
   const header = document.getElementById("header");
   const menu = document.getElementById("menu");
   const hamburguer = document.getElementById("hamburguer");
@@ -83,6 +96,37 @@ import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
   const aboutSection = document.getElementById("about-section");
   const projects = document.getElementById("projects");
   const projectsSection = document.getElementById("projects-section");
+  const contact = document.getElementById("contact");
+  const contactSection = document.getElementById("contact-section");
+
+  // ScrollTrigger for activating the link
+  const links = gsap.utils.toArray("nav a") as HTMLAnchorElement[];
+  links.forEach((a: any) => {
+    const element = document.querySelector(a.getAttribute("href")),
+      linkST = ScrollTrigger.create({
+        trigger: element,
+        start: "top top",
+      }),
+      highlightST = ScrollTrigger.create({
+        trigger: element,
+        start: "top center",
+        end: "bottom center",
+        onToggle: (self) => self.isActive && setActive(a),
+      });
+    a.addEventListener("click", function (e: any) {
+      e.preventDefault();
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: linkST.start,
+        overwrite: "auto",
+      });
+    });
+  });
+
+  function setActive(link: any) {
+    links.forEach((el: any) => el.classList.remove("active"));
+    link.classList.add("active");
+  }
 
   hamburguer?.addEventListener("click", function () {
     header?.classList.toggle("openMenu");
@@ -113,6 +157,12 @@ import LogoRojo from "../assets/Favicon_rojo_sin_fondo.svg";
   projects?.addEventListener("click", (event) => {
     event.preventDefault();
     projectsSection?.scrollIntoView({ behavior: "smooth" });
+    hamburguer?.click();
+  });
+
+  contact?.addEventListener("click", (event) => {
+    event.preventDefault();
+    contactSection?.scrollIntoView({ behavior: "smooth" });
     hamburguer?.click();
   });
 </script>

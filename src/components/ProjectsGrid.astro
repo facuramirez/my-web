@@ -6,17 +6,20 @@ import Paisaje3 from "../assets/paisaje3.webp";
 import Paisaje4 from "../assets/paisaje4.webp";
 ---
 
-<div id="projectsGrid">
+<div
+  id="projectsGrid"
+  class="[&>div>div>div>h3]:text-lg lg:[&>div>div>div>h3]:text-2xl xl:[&>div>div>div>h3]:text-3xl [&>div>div>div>p]:text-md xl:[&>div>div>div>p]:text-lg"
+>
   <div
     class="card relative overflow-hidden transition [&>img]:hover:scale-110 [&>img]:hover:opacity-10 [&>div]:hover:opacity-100 hover:cursor-crosshair"
   >
     <Image src={Paisaje} alt="Paisaje" class="w-full transition duration-500" />
     <div
-      class="info transition duration-500 opacity-0 flex flex-col gap-8 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center"
+      class="info transition duration-500 opacity-0 flex flex-col gap-8 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center [&>div>h3]:text-lg [&>div>h3]:lg:text-xl [&>div>h3]:xl:text-2xl"
     >
       <div class="infoTitle flex flex-col gap-2 items-center justify-center">
-        <h3 class="text-lg lg:text-2xl xl:text-3xl">Trello Reload</h3>
-        <p class="text-md">Una version minimalista de Trello</p>
+        <h3>Trello Reload</h3>
+        <p class="text-sm lg:text-md">Una version minimalista de Trello</p>
       </div>
       <div class="technologies flex flex-row">
         <span
@@ -46,7 +49,7 @@ import Paisaje4 from "../assets/paisaje4.webp";
       class="info transition duration-500 opacity-0 flex flex-col gap-8 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center"
     >
       <div class="infoTitle flex flex-col gap-2 items-center justify-center">
-        <h3 class="text-lg lg:text-2xl xl:text-3xl">Sport Managment</h3>
+        <h3>Sport Managment</h3>
         <p class="text-md">Gestiona tu centro deportivo aqui</p>
       </div>
       <div class="technologies flex flex-row">
@@ -77,7 +80,7 @@ import Paisaje4 from "../assets/paisaje4.webp";
       class="info transition duration-500 opacity-0 flex flex-col gap-8 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center"
     >
       <div class="infoTitle flex flex-col gap-2 items-center justify-center">
-        <h3 class="text-lg lg:text-2xl xl:text-3xl">Dragon Ball Z</h3>
+        <h3>Dragon Ball Z</h3>
         <p class="text-md">Revivi la mejor serie con todos sus personajes</p>
       </div>
       <div class="technologies flex flex-row">
@@ -108,7 +111,7 @@ import Paisaje4 from "../assets/paisaje4.webp";
       class="info transition duration-500 opacity-0 flex flex-col gap-8 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center"
     >
       <div class="infoTitle flex flex-col gap-2 items-center justify-center">
-        <h3 class="text-lg lg:text-2xl xl:text-3xl">Weather App</h3>
+        <h3>Weather App</h3>
         <p class="text-md">¿Día frío o caluroso? Descubrilo</p>
       </div>
       <div class="technologies flex flex-row">

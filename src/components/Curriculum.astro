@@ -1,0 +1,83 @@
+---
+import EducationCard from "./EducationCard.astro";
+import ExperienceCard from "./ExperienceCard.astro";
+import Title from "./Title.astro";
+---
+
+<article
+  id="cv-section"
+  class="bg-[var(--primary-bg)] flex flex-col gap-y-6 lg:gap-y-20 text-white py-8 px-2 lg:py-12"
+>
+  <Title title="Curriculum" />
+  <div
+    class="flex flex-col 2xl:flex-row [&>section]:basis-1/2 gap-4 justify-center [&>section>h2]:text-center [&>section>h2]:text-xl [&>section>h2]:lg:text-3xl [&>section>h2]:2xl:text-4xl [&>section>h2]:mb-4"
+  >
+    <section
+      class="first flex flex-col gap-6 border border-l-0 border-t-0 border-b-0 border-r-4 border-[rgba(255,255,255,0.1)] m-2 md:m-8 lg:m-32 2xl:m-0"
+    >
+      <h2>Experiencia</h2>
+      <ExperienceCard
+        title="Desarrollador Full Stack"
+        company="e-Contact"
+        year="02/2023 - Presente"
+        description="Me desempeño actualmente como desarrollador full stack utilizando el stack MERN, así como también otras tecnologías como Firebase, Elasticsearch y AWS."
+        present
+      />
+      <ExperienceCard
+        title="Profesor de Programacion"
+        company="e-Contact"
+        year="07/2024 - 09/2024"
+        description="Impartí una capacitación de javascript, cubriendo desde los fundamentos del lenguaje, hasta las últimas incorporaciones y estándares modernos (ES6+). La formación incluyó una revisión detallada de la evolución del lenguaje y sus aplicaciones prácticas. Los comentarios de los alumnos fueron muy positivos, destacando la claridad y utilidad del contenido. Como resultado, los participantes pudieron aplicar sus conocimientos en sus tareas diarias, lo que aumentó su rendimiento y aportes a la empresa."
+      />
+      <ExperienceCard
+        title="Profesor de Programacion"
+        company="e-Contact"
+        year="05/2023 - 07/2023"
+        description="Capacitación de css avanzado y javascript, explicando mas en profundidad tanto los estilos como los últimos estándares de lenguaje."
+      />
+      <ExperienceCard
+        title="Profesor de Programacion"
+        company="e-Contact"
+        year="12/2022 - 01/2023"
+        description="Capacitación introductoria al personal de la empresa, donde dí temas como fundamentos de programación, html, css e introducción a javascript, logrando despertar el interés de varios alumnos por seguir formándose en este rubro, recibiendo comentarios favorables destacando la claridad de las sesiones."
+      />
+      <ExperienceCard
+        title="Desarrollador Frontend"
+        company="Citybest"
+        year="05/2022 - 11/2022"
+        description="A cargo del desarrollo y mantenimiento de una landing page y otra web para registrar usuarios y datos varios. También me tocó mantener y anexar funcionalidades a un panel administrativo y colaborar con el equipo encargado del backend."
+      />
+      <ExperienceCard
+        title="Desarrollador Frontend"
+        company="Adalove"
+        year="11/2021 - 05/2022"
+        description="Mantenimiento y desarrollo de un proyecto que nuclea la oferta y la demanda de clientes y trabajadores de distintas áreas. Me desempeñé como desarrollador full stack haciendo uso de tecnologías como React para el frontend y Nest.js para el backend."
+      />
+    </section>
+    <section
+      class="second flex flex-col gap-6 border border-l-4 border-t-0 border-b-0 border-r-0 border-[rgba(255,255,255,0.1)] m-2 md:m-8 lg:m-32 2xl:m-0"
+    >
+      <h2>Educacion</h2>
+      <EducationCard
+        title="Licenciatura en Ciencias de la Computacion."
+        place="Universidad Nacional de Cordoba (UNC)"
+        year="2024 - Presente"
+      />
+      <EducationCard
+        title="Javascript, ES6+, Typescript, React, Node, Next, Nest, Docker."
+        place="UDEMY"
+        year="2021 - 2023"
+      />
+      <EducationCard
+        title="Desarrollador Full Stack."
+        place="Henry Bootcamp"
+        year="2021"
+      />
+      <EducationCard
+        title="Contador Publico Nacional"
+        place="Universidad Nacional de Misiones (UNaM)."
+        year="2007 - 2015"
+      />
+    </section>
+  </div>
+</article>

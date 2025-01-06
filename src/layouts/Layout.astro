@@ -56,4 +56,26 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+  /* Ocultar la barra de desplazamiento */
+  /* ::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* Mostrar la barra de desplazamiento y personalizarla */
+  ::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+    height: 10px; /* Ancho de la barra */
+  }
+
+  /* Personalizar el thumb */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color); /* Color del thumb */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+
+  /* Personalizar la pista */
+  ::-webkit-scrollbar-track {
+    background: var(--secondary-bg); /* Color de fondo de la pista */
+  }
 </style>
