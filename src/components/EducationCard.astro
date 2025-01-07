@@ -1,5 +1,8 @@
 ---
 const { title, place, year } = Astro.props;
+import Degree from "../assets/svg/degree.svg";
+import Student from "../assets/svg/student.svg";
+import Date from "../assets/svg/date.svg";
 ---
 
 <div class="flex flex-row">
@@ -11,11 +14,24 @@ const { title, place, year } = Astro.props;
     id="educationCard"
     class="basis-[95%] lg:basis-[85%] 2xl:basis-[60%] min-w-[320px] md:min-w-[400px] lg:min-w-[600px] h-fit flex flex-col gap-2 bg-[var(--secondary-bg)] text-white p-6 border border-l-[var(--primary-color)] border-l-4 border-r-0 border-t-0 border-b-0"
   >
-    <h3 class="text-md lg:text-md xl:text-lg">{title}</h3>
-    <h2 class="text-lg lg:text-lg xl:text-2xl text-[var(--primary-color)]">
-      {place}
-    </h2>
-    <p class="text-[#ccc]">{year}</p>
+    <div class="flex flex-row gap-x-2">
+      <div class="translate-y-[2px] lg:translate-y-[3px]">
+        <Degree class="size-[1.2rem]" />
+      </div>
+      <h3 class="text-sm lg:text-base xl:text-base">{title}</h3>
+    </div>
+    <div class="flex flex-row gap-x-2">
+      <div class="translate-y-[3px] lg:translate-y-[5px]">
+        <Student class="size-[1.2rem] text-white scale-[1.2]" />
+      </div>
+      <h2 class="text-xl lg:text-xl xl:text-2xl text-[var(--primary-color)]">
+        {place}
+      </h2>
+    </div>
+    <div class="flex flex-row gap-x-2 items-center">
+      <Date class="size-[1.2rem]" />
+      <p class="text-sm lg:text-base xl:text-base text-[#ccc]">{year}</p>
+    </div>
   </div>
   <div class="hidden 2xl:block basis-[20%]"></div>
 </div>

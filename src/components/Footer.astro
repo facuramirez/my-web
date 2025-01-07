@@ -4,7 +4,9 @@ import Logo from "../assets/Favicon_rojo.svg";
 import { Image } from "astro:assets";
 ---
 
-<article class="flex flex-col gap-y-6 pt-12 pb-4 items-center text-white">
+<article
+  class="flex flex-col gap-y-6 pt-12 pb-4 items-center text-white [&>*]:text-base"
+>
   <Image src={Logo} alt="Logo" class="size-24" />
   <Social footer />
   <nav

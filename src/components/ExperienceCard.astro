@@ -1,5 +1,10 @@
 ---
-const { title, company, year, description, present } = Astro.props;
+const { title, place, company, year, description, present } = Astro.props;
+import Code from "../assets/svg/code.svg";
+import Location from "../assets/svg/location.svg";
+import Company from "../assets/svg/company.svg";
+import Date from "../assets/svg/date.svg";
+import Description from "../assets/svg/description.svg";
 ---
 
 <div class="flex flex-row">
@@ -8,14 +13,34 @@ const { title, company, year, description, present } = Astro.props;
     id="experienceCard"
     class="basis-[95%] lg:basis-[85%] 2xl:basis-[60%] min-w-[320px] md:min-w-[400px] lg:min-w-[600px] h-fit flex flex-col gap-2 bg-[var(--secondary-bg)] text-white p-6 border border-r-[var(--primary-color)] border-l-0 border-r-4 border-t-0 border-b-0"
   >
-    <h3 class="text-md lg:text-md xl:text-lg">{title}</h3>
-    <h2 class="text-lg lg:text-lg xl:text-2xl text-[var(--primary-color)]">
-      {company}
-    </h2>
-    <p class:list={[{ "text-green-500": present }]} class="text-[#ccc]">
-      {year}
-    </p>
-    <p class="text-[#fff]">{description}</p>
+    <div class="flex flex-row gap-x-2 items-center">
+      <Code class="size-[1.2rem]" />
+      <h3 class="text-sm lg:text-base xl:text-base">{title}</h3>
+    </div>
+    <div class="flex flex-row gap-x-2 items-center">
+      <Company class="size-[1.2rem]" />
+      <h2 class="text-xl lg:text-xl xl:text-2xl text-[var(--primary-color)]">
+        {company}
+      </h2>
+    </div>
+    <div class="flex flex-row gap-x-2 items-center">
+      <Location class="size-[1.2rem]" />
+      <h4 class="text-sm lg:text-base xl:text-base italic text-[#ccc]">
+        {place}
+      </h4>
+    </div>
+    <div class="flex flex-row gap-x-2 items-center">
+      <Date class="size-[1.2rem]" />
+      <p
+        class:list={[{ "text-green-500": present }]}
+        class="text-sm lg:text-base xl:text-base text-[#ccc]"
+      >
+        {year}
+      </p>
+    </div>
+    <div class="flex flex-row gap-x-2 py-1">
+      <p class="text-sm lg:text-base xl:text-base text-[#fff]">{description}</p>
+    </div>
   </div>
   <div
     class="line basis-[5%] lg:basis-[15%] 2xl:basis-[20%] -translate-x-[2px]"
