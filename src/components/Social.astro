@@ -10,47 +10,26 @@ import Ig from "../assets/svg/ig.svg";
   id="social"
   class:list={[
     [
-      "flex gap-x-4 my-6 [&>svg]:cursor-pointer hover:[&>a>svg]:bg-[var(--primary-color)] hover:[&>a>svg]:fill-[#fff] hover:[&>a>svg]:transition",
+      "flex gap-x-4 my-6 [&>svg]:cursor-pointer hover:[&>a>svg]:bg-[var(--primary-color)] hover:[&>a>svg]:fill-[#fff] hover:[&>a>svg]:transition [&>a>svg]:size-[2rem]",
     ],
     {
-      "lg:hidden absolute bottom-[2rem] left-1/2 -translate-x-1/2 lg:[&>a>svg]:size-[2rem] [&>a>svg]:size-[2rem]":
-        mobile,
+      "lg:hidden absolute bottom-[2rem] left-1/2 -translate-x-1/2": mobile,
     },
     {
-      "w-fit my-2 m-0 mx-auto [&>a>svg]:size-[2rem]": footer,
+      "w-fit my-2 m-0 mx-auto": footer,
     },
   ]}
 >
   <a href="https://wa.me/3764227220" target="_blank">
-    <Wp
-      id="wp"
-      width={"2.5rem"}
-      height={"2.5rem"}
-      class="bg-white p-2 rounded-[0.5rem]"
-    />
+    <Wp id="wp" class="bg-white p-2 rounded-[0.5rem]" />
   </a>
   <a href="https://www.linkedin.com/in/facundoramirezok/" target="_blank">
-    <Lkd
-      id="lkd"
-      width={"2.5rem"}
-      height={"2.5rem"}
-      class="bg-white p-2 rounded-[0.5rem]"
-    />
+    <Lkd id="lkd" class="bg-white p-2 rounded-[0.5rem]" />
   </a>
   <a href="https://github.com/facuramirez" target="_blank">
-    <Gh
-      id="gh"
-      width={"2.5rem"}
-      height={"2.5rem"}
-      class="bg-white p-[5px] rounded-[0.5rem]"
-    />
+    <Gh id="gh" class="bg-white p-[5px] rounded-[0.5rem]" />
   </a>
   <a href="https://www.instagram.com/facuramirez_/" target="_blank">
-    <Ig
-      id="ig"
-      width={"2.5rem"}
-      height={"2.5rem"}
-      class="bg-white p-[7px] rounded-[0.5rem]"
-    />
+    <Ig id="ig" class="bg-white p-[7px] rounded-[0.5rem]" />
   </a>
 </div>
