@@ -24,8 +24,8 @@ import MyData from "./MyData.astro";
       verla aqui !
     </p> -->
 
-    <div class="flex flex-col gap-y-4 items-center">
-      <p>
+    <div class="flex flex-col gap-y-4 items-center mb-4">
+      <p id="about-description" class="description text-md lg:text-lg">
         Soy <span class="text-[var(--primary-color)]">Facundo Ramírez</span>.
         Más que un desarrollador, soy un apasionado por encontrar soluciones
         creativas a través de la tecnología. Autodidacta y actualmente
@@ -37,19 +37,26 @@ import MyData from "./MyData.astro";
         excelente solucion para la administracion de centros deportivos. Te
         invito a verla aqui!
       </p>
-      <p
-        id="contactP"
-        class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 text-2xl my-4"
+      <div
+        class="bg-white rounded-lg text-black w-fit lg:min-w-fit lg:w-[75%] p-2 pb-6 lg:pb-4 my-6 flex flex-col lg:flex-row lg:gap-4 items-center justify-center"
       >
-        ¿Tienes un proyecto en mente? ¡Conversemos y hagámoslo realidad! <nav>
-          <a
-            id="contactMe"
-            href="#contact-section-title"
-            class="mx-auto text-2xl px-2 text-[var(--primary-color)] border border border-[var(--primary-color)]"
-            >CONTACTAME
-          </a>
-        </nav>
-      </p>
+        <p
+          id="contactP"
+          class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 text-2xl my-4 text-center"
+        >
+          <span class="text-xl"
+            >¿Tienes un proyecto en mente? ¡Conversemos y hagámoslo realidad!</span
+          >
+          <nav>
+            <a
+              id="contactMe"
+              href="#contact-section-title"
+              class="mx-auto text-3xl px-2 text-[var(--primary-color)] border border border-[var(--primary-color)] hover:border-white"
+              >CONTACTAME
+            </a>
+          </nav>
+        </p>
+      </div>
     </div>
     <section class="interestSection flex flex-row gap-12 lg:mt-12">
       <div class="first basis-[40%] flex flex-col gap-y-4 lg:gap-y-8">
