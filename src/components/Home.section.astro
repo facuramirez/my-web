@@ -4,11 +4,12 @@ import Facu from "../assets/facu2.png";
 import Social from "./Social.astro";
 ---
 
-<article
-  id="home-section"
-  class="min-h-dvh relative bg-[var(--primary-bg)] flex flex-col lg:flex-row items-center justify-evenly lg:justify-center p-12 lg:p-24"
->
-  <!-- <section class="container">
+<article id="home-section-title">
+  <div
+    id="home-section"
+    class="min-h-dvh relative bg-[var(--primary-bg)] flex flex-col lg:flex-row items-center justify-evenly lg:justify-center p-12 lg:p-24"
+  >
+    <!-- <section class="container">
     <div class="cubo mx-auto">
       <div id="cara1" class="cara"></div>
       <div id="cara2" class="cara"></div>
@@ -18,51 +19,54 @@ import Social from "./Social.astro";
       <div id="cara6" class="cara"></div>
     </div>
   </section> -->
-  <div
-    class="absolute square squareLeft size-[3rem] bottom-[1rem] md:bottom-[3rem] left-[0.2rem] md:left-[3rem] flex flex-col items-center"
-  >
-    <div class="sq1 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
-    <div class="sq2 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
-    <div class="sq3 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
-  </div>
-  <div
-    class="absolute square squareRight size-[3rem] bottom-[1rem] md:bottom-[3rem] right-[0.2rem] md:right-[3rem] flex flex-col items-center"
-  >
-    <div class="sq1 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
-    <div class="sq2 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
-    <div class="sq3 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
-  </div>
-  <section
-    class="flex flex-col basis-full w-full lg:basis-1/2 text-[#fff] items-center order-2 lg:order-1 lg:gap-y-2 xl:gap-y-4 [&>*]:text-center [&>*]:[text-shadow:_3px_3px_5px_#000]"
-  >
-    <h3 class="text-xl lg:text-xl xl:text-2xl 2xl:text-4xl">Facundo Ramirez</h3>
     <div
-      class="flex flex-row flex-wrap gap-1 lg:gap-2 items-center justify-center"
+      class="absolute square squareLeft size-[3rem] bottom-[1rem] md:bottom-[3rem] left-[0.2rem] md:left-[3rem] flex flex-col items-center"
     >
-      <h2 class="mt-2 lg:mt-0 text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl">
-        Desarrollador
-      </h2>
-      <h2 class="mt-2 lg:mt-0 text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl">
-        Full Stack
-      </h2>
+      <div class="sq1 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
+      <div class="sq2 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
+      <div class="sq3 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
     </div>
-
-    <Social />
-    <button
-      id="walk"
-      class="min-w-fit mt-2 lg:mt-4 text-white bg-[var(--primary-color)] hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] font-medium rounded-full text-sm lg:text-lg px-6 py-2 text-center me-2 mb-2 dark:bg-[var(--primary-color)] dark:hover:bg-[var(--primary-color)] dark:focus:ring-[var(--primary-color)]"
-      >Da un paseo por mi web aqui</button
+    <div
+      class="absolute square squareRight size-[3rem] bottom-[1rem] md:bottom-[3rem] right-[0.2rem] md:right-[3rem] flex flex-col items-center"
     >
-  </section>
-  <section
-    class="basis-full w-full lg:basis-1/2 order-1 lg:order-2 mix-blend-lighten"
-  >
-    <Image
-      src={Facu}
-      alt="Facu"
-      class="facuImg min-w-[10rem] w-[75%] max-w-[30rem] lg:min-w-[25rem] lg:w-[75%] lg:max-w-[50rem] mx-auto"
-    />
-  </section>
+      <div class="sq1 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
+      <div class="sq2 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
+      <div class="sq3 border size-[1rem] rotate-45 border-t-0 border-l-0"></div>
+    </div>
+    <section
+      class="flex flex-col basis-full w-full lg:basis-1/2 text-[#fff] items-center order-2 lg:order-1 lg:gap-y-2 xl:gap-y-4 [&>*]:text-center [&>*]:[text-shadow:_3px_3px_5px_#000]"
+    >
+      <h3 class="text-xl lg:text-xl xl:text-2xl 2xl:text-4xl">
+        Facundo Ramirez
+      </h3>
+      <div
+        class="flex flex-row flex-wrap gap-1 lg:gap-2 items-center justify-center"
+      >
+        <h2 class="mt-2 lg:mt-0 text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl">
+          Desarrollador
+        </h2>
+        <h2 class="mt-2 lg:mt-0 text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl">
+          Full Stack
+        </h2>
+      </div>
+
+      <Social />
+      <button
+        id="walk"
+        class="min-w-fit mt-2 lg:mt-4 text-white bg-[var(--primary-color)] hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] font-medium rounded-full text-sm lg:text-lg px-6 py-2 text-center me-2 mb-2 dark:bg-[var(--primary-color)] dark:hover:bg-[var(--primary-color)] dark:focus:ring-[var(--primary-color)]"
+        >Da un paseo por mi web aqui</button
+      >
+    </section>
+    <section
+      class="basis-full w-full lg:basis-1/2 order-1 lg:order-2 mix-blend-lighten"
+    >
+      <Image
+        src={Facu}
+        alt="Facu"
+        class="facuImg min-w-[10rem] w-[75%] max-w-[30rem] lg:min-w-[25rem] lg:w-[75%] lg:max-w-[50rem] mx-auto"
+      />
+    </section>
+  </div>
 </article>
 
 <style>
@@ -292,4 +296,155 @@ import Social from "./Social.astro";
       transform: translateY(0);
     }
   }
+  .driver-popover.driverjs-theme {
+    background-color: #fde047;
+    color: #000;
+  }
+
+  .driver-popover.driverjs-theme .driver-popover-title {
+    font-size: 20px;
+  }
+
+  .driver-popover.driverjs-theme .driver-popover-title,
+  .driver-popover.driverjs-theme .driver-popover-description,
+  .driver-popover.driverjs-theme .driver-popover-progress-text {
+    color: #000;
+  }
+
+  .driver-popover.driverjs-theme button {
+    flex: 1;
+    text-align: center;
+    background-color: #000;
+    color: #ffffff;
+    border: 2px solid #000;
+    text-shadow: none;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 6px;
+  }
+
+  .driver-popover.driverjs-theme button:hover {
+    background-color: #000;
+    color: #ffffff;
+  }
+
+  .driver-popover.driverjs-theme .driver-popover-navigation-btns {
+    justify-content: space-between;
+    gap: 3px;
+  }
+
+  .driver-popover.driverjs-theme .driver-popover-close-btn {
+    color: #9b9b9b;
+  }
+
+  .driver-popover.driverjs-theme .driver-popover-close-btn:hover {
+    color: #000;
+  }
+
+  .driver-popover.driverjs-theme
+    .driver-popover-arrow-side-left.driver-popover-arrow {
+    border-left-color: #fde047;
+  }
+
+  .driver-popover.driverjs-theme
+    .driver-popover-arrow-side-right.driver-popover-arrow {
+    border-right-color: #fde047;
+  }
+
+  .driver-popover.driverjs-theme
+    .driver-popover-arrow-side-top.driver-popover-arrow {
+    border-top-color: #fde047;
+  }
+
+  .driver-popover.driverjs-theme
+    .driver-popover-arrow-side-bottom.driver-popover-arrow {
+    border-bottom-color: #fde047;
+  }
 </style>
+
+<script>
+  import { driver } from "driver.js";
+  import "driver.js/dist/driver.css";
+
+  const walk = document.getElementById("walk");
+
+  const driverObj = driver({
+    showProgress: false,
+    showButtons: ["next", "previous"],
+    popoverClass: "driverjs-theme",
+    overlayColor: "#313131",
+    steps: [
+      {
+        element: "#walk",
+        popover: {
+          title: "Inicio",
+          description:
+            "Informate quien soy y lo que puedo ofrecer, dando este paseo",
+          side: "left",
+          align: "start",
+        },
+      },
+      {
+        element: "#about-description",
+        popover: {
+          title: "Sobre mi",
+          description:
+            "Conoce como fueron mis inicios para llegar a ser desarrollador de software",
+          side: "bottom",
+          align: "center",
+        },
+      },
+      {
+        element: "#projects-description",
+        popover: {
+          title: "Proyectos",
+          description:
+            "Te muestro algunos de mis proyectos realizados en mis tiempos libres",
+          side: "bottom",
+          align: "start",
+        },
+      },
+      {
+        element: "#curriculum-description",
+        popover: {
+          title: "Curriculum",
+          description:
+            "Enterate de los estudios y experiencia de la persona que desarrollara tu web",
+          side: "bottom",
+          align: "start",
+        },
+      },
+      {
+        element: "#contact-description",
+        popover: {
+          title: "Contacto",
+          description: "Te dejo toda la info para que puedas contactarme",
+          side: "bottom",
+          align: "start",
+        },
+      },
+    ],
+  });
+
+  /*   driverObj.highlight({
+    element: "#demo-theme",
+    popover: {
+      title: "Style However You Want",
+      description:
+        "You can use the default class names and override the styles or you can pass a custom class name to the popoverClass option either globally or per step.",
+      side: "left",
+      align: "center",
+    },
+  });
+ */
+  driverObj.setConfig({
+    ...driverObj.getConfig(),
+    nextBtnText: "Siguiente",
+    prevBtnText: "Anterior",
+    doneBtnText: "Finalizar",
+  });
+
+  walk?.addEventListener("click", function () {
+    driverObj.drive();
+  });
+</script>

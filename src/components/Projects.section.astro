@@ -4,11 +4,19 @@ import ProjectsGrid from "./ProjectsGrid.astro";
 import Banner from "./Banner.astro";
 ---
 
-<Title id="projects-section-title" title="Proyectos" />
 <article
-  id="projects-section"
-  class="bg-[var(--primary-bg)] flex flex-col gap-y-6 lg:gap-y-20 text-white py-8 lg:px-0 lg:py-12 lg:py-16 xl:py-24"
+  id="projects-section-title"
+  class="bg-[var(--primary-bg)] flex flex-col gap-y-4 lg:gap-y-16 text-white my-8 lg:px-0 lg:my-12 lg:my-16 xl:my-24"
 >
-  <ProjectsGrid />
-  <Banner />
+  <Title title="Proyectos" />
+  <div id="projects-section" class="flex flex-col gap-y-4 lg:gap-y-16">
+    <p
+      id="projects-description"
+      class="description text-center text-md lg:text-lg px-8 lg:px-12 lg:px-20 xl:px-26"
+    >
+      Aca podras observar algunos de mis proyectos personales realizados.
+    </p>
+    <ProjectsGrid />
+    <Banner />
+  </div>
 </article>

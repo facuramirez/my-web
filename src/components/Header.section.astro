@@ -96,7 +96,7 @@ import Social from "./Social.astro";
   const line2 = document.getElementById("line2");
   const line3 = document.getElementById("line3");
   const home = document.getElementById("home");
-  const homeSection = document.getElementById("home-section");
+  const homeSection = document.getElementById("home-section-title");
   const about = document.getElementById("about");
   const aboutSection = document.getElementById("about-section-title");
   const projects = document.getElementById("projects");
@@ -107,7 +107,7 @@ import Social from "./Social.astro";
   const contactSection = document.getElementById("contact-section-title");
 
   // ScrollTrigger for activating the link
-  const links = gsap.utils.toArray("nav a") as HTMLAnchorElement[];
+  const links = gsap.utils.toArray("header nav a");
   links.forEach((a: any) => {
     const element = document.querySelector(a.getAttribute("href")),
       linkST = ScrollTrigger.create({
@@ -143,15 +143,9 @@ import Social from "./Social.astro";
     line3?.classList.toggle("openLine3");
   });
 
-  const slideUp = {
-    distance: "150%",
-    origin: "bottom",
-    opacity: null,
-  };
-
   home?.addEventListener("click", (event) => {
     event.preventDefault();
-    homeSection?.scrollIntoView({ behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     hamburguer?.click();
   });
 
