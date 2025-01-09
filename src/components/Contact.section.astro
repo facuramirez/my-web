@@ -5,7 +5,7 @@ import MapaCba from "../assets/svg/mapa.webp";
 import Send from "../assets/svg/send.svg";
 import Clean from "../assets/svg/clean.svg";
 import ContactoFondo from "../assets/mapa.jpg";
-import LogoUbicacion from "../assets/svg/Ubicacion_negro.svg";
+import LocationLogo from "../assets/svg/Ubicacion_negro.svg";
 ---
 
 <article id="contact-section-title">
@@ -47,8 +47,9 @@ import LogoUbicacion from "../assets/svg/Ubicacion_negro.svg";
         </form>
 
         <section class="z-40 basis-1/2">
-          <figure class="second w-full max-w-[50rem] mx-auto">
+          <figure class="second relative w-full max-w-[50rem] mx-auto">
             <Image src={MapaCba} alt="mapa" class="w-[100%]" />
+            <LocationLogo class="absolute size-[5%] top-[38.5%] left-[43%]" />
           </figure>
         </section>
       </div>
