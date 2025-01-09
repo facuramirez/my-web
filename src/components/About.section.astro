@@ -46,25 +46,24 @@ import MyData from "./MyData.astro";
     </section>
   </div>
   <div
-    class="bg-white text-black w-full p-2 pb-6 lg:pb-4 my-12 mb-16 flex flex-col lg:flex-row lg:gap-4 items-center justify-center"
+    class="bg-white text-black w-full p-6 lg:py-8 my-12 flex flex-col lg:flex-row gap-4 items-center justify-center"
   >
-    <p
-      id="contactP"
-      class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 text-2xl my-4 text-center"
-    >
-      <span class="text-lg lg:xl px-4"
-        >¿Tienes un proyecto en mente? ¡Conversemos y hagámoslo realidad!</span
-      >
-
-      <nav>
-        <a
-          id="contactMe"
-          href="#contact-section-title"
-          class="mx-auto text-2xl lg:text-3xl px-2 text-[var(--primary-color)] border border border-[var(--primary-color)] hover:border-black border-2"
-          >CONTACTAME
-        </a>
-      </nav>
-    </p>
+    <div class="flex flex-col lg:flex-row gap-2">
+      <p id="contactP" class="text-lg text-center">
+        ¿Tienes un proyecto en mente?
+      </p>
+      <p id="contactP" class="text-lg text-center">
+        ¡Conversemos y hagámoslo realidad!
+      </p>
+    </div>
+    <nav>
+      <a
+        id="contactMe"
+        href="#contact-section-title"
+        class="mx-auto text-2xl lg:text-3xl px-2 text-[var(--primary-color)] border border border-[var(--primary-color)] hover:border-black border-2"
+        >CONTACTAME
+      </a>
+    </nav>
   </div>
 </article>
 
