@@ -23,18 +23,22 @@ import MyData from "./MyData.astro";
     </p> -->
 
     <div class="flex flex-col gap-y-4 items-center mb-4">
-      <p id="about-description" class="description text-md lg:text-lg">
-        Soy <span class="text-[var(--primary-color)]">Facundo Ramírez</span>.
-        Más que un desarrollador, soy un apasionado por encontrar soluciones
-        creativas a través de la tecnología. Autodidacta y actualmente
-        estudiante de Ciencias de la Computación, he desarrollado una sólida
-        base en desarrollo web, lo cual me abrió puertas para trabajar en
-        empresas como desarrollador full stack y poder realizar proyectos
-        propios. Mi preferida y mas reciente aplicación, Sport Management,
-        fusiona mi amor por el deporte y la programación, ofreciendo una
-        excelente solución para la administracion de centros deportivos. Te
-        invito a verla aquí!
-      </p>
+      <nav>
+        <p id="about-description" class="description text-md lg:text-lg">
+          Soy <span class="text-[var(--primary-color)]">Facundo Ramírez</span>.
+          Más que un desarrollador, soy un apasionado por encontrar soluciones
+          creativas a través de la tecnología. Autodidacta y actualmente
+          estudiante de Ciencias de la Computación, he desarrollado una sólida
+          base en desarrollo web, lo cual me abrió puertas para trabajar en
+          empresas como desarrollador full stack y poder realizar proyectos
+          propios. ¡Exploralos directamente desde
+          <a
+            id="projectsLink"
+            href="#projects-section-title"
+            class="underline cursor-pointer">aquí!</a
+          >
+        </p>
+      </nav>
     </div>
     <section class="interestSection flex flex-row gap-12 lg:mt-12">
       <div class="first basis-[40%] flex flex-col gap-y-4 lg:gap-y-8">
@@ -60,7 +64,7 @@ import MyData from "./MyData.astro";
       <a
         id="contactMe"
         href="#contact-section-title"
-        class="mx-auto text-2xl lg:text-3xl px-2 text-[var(--primary-color)] border border border-[var(--primary-color)] hover:border-black border-2"
+        class="nav mx-auto text-2xl lg:text-3xl px-2 text-[var(--primary-color)] border border border-[var(--primary-color)] hover:border-black border-2"
         >CONTACTAME
       </a>
     </nav>
@@ -98,10 +102,14 @@ import MyData from "./MyData.astro";
 <script>
   import gsap from "gsap";
   const contactMe = document.getElementById("contactMe");
+  const projectsLink = document.getElementById("projectsLink");
+
   const contactSection = document.getElementById("contact-section-title");
+  const projectsSection = document.getElementById("projects-section-title");
 
   // ScrollTrigger for activating the link
   const links = gsap.utils.toArray("article div div p nav a");
+  console.log(links);
   links.forEach((a: any) => {
     const element = document.querySelector(a.getAttribute("href")),
       linkST = ScrollTrigger.create({
@@ -128,6 +136,11 @@ import MyData from "./MyData.astro";
     links.forEach((el: any) => el.classList.remove("active"));
     link.classList.add("active");
   }
+
+  projectsLink?.addEventListener("click", (event) => {
+    event.preventDefault();
+    projectsSection?.scrollIntoView({ behavior: "smooth" });
+  });
 
   contactMe?.addEventListener("click", (event) => {
     event.preventDefault();
