@@ -64,7 +64,7 @@ import MyData from "./MyData.astro";
       <a
         id="contactMe"
         href="#contact-section-title"
-        class="nav mx-auto text-2xl lg:text-3xl px-2 text-[var(--primary-color)] border border border-[var(--primary-color)] hover:border-black border-2"
+        class="nav mx-auto text-2xl lg:text-3xl px-2 text-[var(--primary-color)] border border border-[var(--primary-color)] hover:border-[var(--secondary-color)] border-2"
         >CONTACTAME
       </a>
     </nav>
@@ -109,7 +109,6 @@ import MyData from "./MyData.astro";
 
   // ScrollTrigger for activating the link
   const links = gsap.utils.toArray("article div div p nav a");
-  console.log(links);
   links.forEach((a: any) => {
     const element = document.querySelector(a.getAttribute("href")),
       linkST = ScrollTrigger.create({
