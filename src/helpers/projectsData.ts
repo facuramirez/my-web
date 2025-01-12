@@ -1,4 +1,5 @@
 import React from "../components/React.tech.astro";
+import Next from "../components/Next.tech.astro";
 import Tailwind from "../components/Tailwind.tech.astro";
 import Nest from "../components/Nest.tech.astro";
 import MongoDB from "../components/MongoDB.tech.astro";
@@ -27,7 +28,7 @@ export const projects: ProjectsT[] = [
     name: "Sport Managment",
     description: "Gestiona tu centro deportivo aqui",    
     img: 'https://i.imgur.com/26j75xi.png',
-    technologies: [React, Tailwind, Nest, Firebase ],
+    technologies: [Next, Tailwind, Nest, Firebase ],
     link: "#",
   },
   {
