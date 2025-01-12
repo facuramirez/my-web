@@ -13,13 +13,13 @@ import { projects } from "../helpers/projectsData";
 >
   {
     projects.map((project) => (
-      <div class="card relative overflow-hidden transition [&>a>img]:hover:scale-110 [&>a>img]:hover:opacity-10 [&>a>div]:hover:opacity-100 hover:[&>*]:cursor-crosshair">
+      <div class="card relative overflow-hidden transition [&>a>img]:hover:scale-110 [&>a>img]:hover:opacity-10 [&>a>div]:hover:opacity-100 hover:[&>*]:cursor-crosshair grayscale-[100%] hover:grayscale-[0%]">
         <a href={project.link} target="_blank">
           <Image
             src={project.img}
             alt="Paisaje"
             inferSize={true}
-            class="w-full object-cover h-[12rem] md:h-full md:max-h-[28rem] transition duration-500 grayscale-[50%]"
+            class="w-full object-cover h-[12rem] md:h-full md:max-h-[28rem] transition duration-500"
           />
           <div class="info transition duration-500 opacity-0 flex flex-col gap-8 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center">
             <div class="infoTitle flex flex-col gap-2 items-center justify-center">
