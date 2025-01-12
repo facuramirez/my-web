@@ -8,43 +8,125 @@ import Read from "../assets/svg/read.svg";
 
 <h2 class="text-xl lg:text-xl xl:text-2xl">Mis intereses</h2>
 <div
-  class="gridInterested flex flex-row justify-center gap-4 lg:gap-8 [&>div]:bg-[var(--secondary-bg)] hover:[&>div]:bg-[var(--primary-color)] transition py-2 [&>div]:py-2 [&>div]:py-4 lg:[&>div]:p-6 [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:justify-center [&>div]:gap-2 text-base [&>div>h2]:lg:text-lg [&>div]:text-center"
+  class="gridInterested flex flex-row justify-center gap-4 lg:gap-8 [&>div]:h-[10rem] [&>div>div>div]:bg-[var(--secondary-bg)] transition [&>div>div>div]:py-4 lg:[&>div>div>div]:6 [&>div>div>div]:flex [&>div>div>div]:flex-col [&>div>div>div]:items-center [&>div>div>div]:justify-center [&>div>div>div]:gap-2 text-base [&>div>div>div>h2]:lg:text-lg [&>div>div>div]:text-center"
 >
   <div class="cardInterested">
-    <Web />
-    <h2>Desarrollo Web</h2>
+    <div id="card1" class="card">
+      <div class="card-front h-[10rem]">
+        <Web />
+        <h2>Desarrollo Web</h2>
+      </div>
+      <div class="card-back px-4">
+        <p>
+          Mi mayor enfoque esta aqui. Desarrollo tanto frontend como backend
+          usando el stack MERN.
+        </p>
+      </div>
+    </div>
   </div>
   <div class="cardInterested">
-    <CienciasComputacion />
-    <h2>Ciencias de la Computación</h2>
+    <div id="card2" class="card">
+      <div class="card-front">
+        <CienciasComputacion />
+        <h2>Ciencias de la Computación</h2>
+      </div>
+      <div class="card-back px-4">
+        <p>
+          Estudio Licenciatura en Ciencias de la Computacion en la Universidad
+          Nacional de Cordoba (UNC).
+        </p>
+      </div>
+    </div>
   </div>
   <div class="cardInterested">
-    <Sport class="sport" />
-    <h2>Deportes</h2>
+    <div id="card3" class="card">
+      <div class="card-front">
+        <Sport class="sport" />
+        <h2>Deportes</h2>
+      </div>
+      <div class="card-back px-4">
+        <p>
+          Me encanta el deporte y el entrenamiento en general, siendo Futbol y
+          Crossfit los que practico habitualmente.
+        </p>
+      </div>
+    </div>
   </div>
   <div class="cardInterested">
-    <Travel />
-    <h2>Viajar</h2>
+    <div id="card4" class="card">
+      <div class="card-front">
+        <Travel />
+        <h2>Viajar</h2>
+      </div>
+      <div class="card-back px-4">
+        <p>Conocer nuevos lugares es un hobbie que lo tendre siempre.</p>
+      </div>
+    </div>
   </div>
   <div class="cardInterested">
-    <Read />
-    <h2>Leer</h2>
+    <div id="card5" class="card">
+      <div class="card-front">
+        <Read />
+        <h2>Leer</h2>
+      </div>
+      <div class="card-back px-4">
+        <p>Me gusta estar aprendiendo constatemente cosas nuevas.</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
   .gridInterested {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    perspective: 1000px;
+    width: 100%;
+    .card {
+      position: relative;
+      transform-style: preserve-3d; /* Necesario para la rotación en 3D */
+      transition: transform 0.5s ease;
+      width: 100%;
+      height: 100%;
+      .card-front,
+      .card-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        backface-visibility: hidden; /* Oculta el lado opuesto cuando la tarjeta gira */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+      }
+      .card-back {
+        background-color: var(--primary-color);
+        transform: rotateY(
+          180deg
+        ); /* La parte posterior está rotada inicialmente */
+      }
+    }
+
     svg {
       width: 80px;
       height: 100%;
     }
   }
+  .cardInterested:hover #card1,
+  .cardInterested:hover #card2,
+  .cardInterested:hover #card3,
+  .cardInterested:hover #card4,
+  .cardInterested:hover #card5 {
+    transform: rotateY(180deg); /* Al hacer hover, la tarjeta rota 180 grados */
+  }
 
   @media screen and (max-width: 768px) {
     .gridInterested {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
   }
 </style>
