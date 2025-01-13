@@ -18,7 +18,7 @@ export const projects: ProjectsT[] = [
   {
     id: 1,
     name: "Jira Reload",
-    description: "Una version minimalista de Jira",
+    description: "Una versión minimalista de Jira",
     img: 'https://i.imgur.com/fEUmKfF.jpeg',
     technologies: [React, Tailwind, Nest, MongoDB],
     link: "#",
@@ -26,7 +26,7 @@ export const projects: ProjectsT[] = [
   {
     id: 2,
     name: "Sport Managment",
-    description: "Gestiona tu centro deportivo aqui",    
+    description: "Gestioná tu centro deportivo aquí",    
     img: 'https://i.imgur.com/26j75xi.png',
     technologies: [Next, Tailwind, Nest, Firebase ],
     link: "#",
@@ -34,7 +34,7 @@ export const projects: ProjectsT[] = [
   {
     id: 3,
     name: "Dragon Ball",
-    description: "Revivi la mejor serie con todos sus personajes",
+    description: "Reviví la mejor serie con todos sus personajes",
     img: 'https://i.imgur.com/hrBnhV7.jpeg',
     technologies: [React, Tailwind, Firebase],
     link: "#",
