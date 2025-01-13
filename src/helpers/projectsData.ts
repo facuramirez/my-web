@@ -37,7 +37,7 @@ export const projects: ProjectsT[] = [
     description: "Reviví la mejor serie con todos sus personajes",
     img: 'https://i.imgur.com/hrBnhV7.jpeg',
     technologies: [React, Tailwind, Firebase],
-    link: "#",
+    link: "https://dragon-ball-facudev.netlify.app/",
   },
   {
     id: 4,
